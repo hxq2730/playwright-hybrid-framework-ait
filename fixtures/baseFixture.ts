@@ -12,6 +12,7 @@ export const test = base.extend<MyFixtures>({
     // define fixture homePage
   homePage: async ({ page }, use) => {
     const homePage = new HomePage(page);
+    await homePage.goto();
     await use(homePage);
   },
 
